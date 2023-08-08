@@ -30,6 +30,7 @@ public class Assignment3 {
         String subject1 = scanner.next();
 
         boolean flag1 = subject1.startsWith("SE-");
+        
         if (flag1 == false){
             System.out.printf("%sInvalid Subject%s\n", "\033[031m", "\033[030m");
             return;
@@ -47,10 +48,18 @@ public class Assignment3 {
         String subject2 = scanner.next();
 
         boolean flag2 = subject1.startsWith("SE-");
+        boolean flag2a = subject2.equals(subject1);
+
         if (flag2 == false){
             System.out.printf("%sInvalid Subject%s\n", "\033[031m", "\033[030m");
             return;
         }
+
+        if (flag2a == true){
+            System.out.printf("%sSubject Name is already exits%s\n", "\033[031m", "\033[030m");
+            return;
+        }
+
         System.out.print("Enter Subject-2 Marks : ");
         double marks2 = scanner.nextDouble();
 
@@ -63,10 +72,17 @@ public class Assignment3 {
         String subject3 = scanner.next();
 
         boolean flag3 = subject1.startsWith("SE-");
+        boolean flag3a = subject3.equals(subject1) || subject3.equals(subject2);
+
         if (flag3 == false){
             System.out.printf("%sInvalid Subject%s\n", "\033[031m", "\033[030m");
             return;
         }
+        if (flag3a == true){
+            System.out.printf("%sSubject Name is already Exits%s\n", "\033[031m", "\033[030m");
+            return;
+        }
+
         System.out.print("Enter Subject-3 Marks : ");
         double marks3 = scanner.nextDouble();
 
