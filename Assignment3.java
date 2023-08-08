@@ -7,7 +7,7 @@ public class Assignment3 {
     public static void main(String[] args) {
 
         System.out.print("Enter Your Name : ");
-        String name = scanner.nextLine();
+        String name = scanner.nextLine().strip();
 
         if (name.length()<1){
             System.out.printf("%sInvalid Name%s\n", "\033[031m", "\033[030m");
@@ -92,11 +92,12 @@ public class Assignment3 {
         }
 
         double total = marks1+marks2+marks3;
-        double avg = (total/3);
+        double avg = (double)(total/3);
         String status = null;
         String status1 = null;
         String status2 = null;
         String status3 = null;
+        
 
         if (marks1>75) status1 = "\033[034;1m"+"Distinguished Pass (DP)"+"\033[030;0m";
         else if (marks1>65) status1 = "\033[032;1m"+"Credit Pass"+"\033[030;0m";
@@ -130,6 +131,7 @@ public class Assignment3 {
         System.out.printf("|%-12s|%-12s|%-40s|\n", subject2, marks2, status2);
         System.out.printf("|%-12s|%-12s|%-40s|\n", subject3, marks3, status3);
         System.out.printf("----------------------------------------------------\n");
+        
     
     }
 }
